@@ -21,5 +21,5 @@ Take a look at the included [demo.html](http://google.github.io/angular-material
 
 ## License
 
-This package is released under [MIT license](http://google.github.io/angular-material-icons/LICENSE.txt).
+This package is released under [MIT license](blob/master/LICENSE).
 All icons are released under an [Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/) license.
