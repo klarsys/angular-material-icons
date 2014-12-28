@@ -780,14 +780,14 @@ angular.module('ngMdIcons', [])
 						attr.icon = 'error';
 					// Look-up icon shape
 					var shape = icons[attr.icon];
+					// Check for size
+					if (attr.size === undefined)
+						attr.size = 24;
 					// Render SVG
-					element.html('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">' + shape + '</svg>');
+					element.html('<svg xmlns="http://www.w3.org/2000/svg" width="' + attr.size + '" height="' + attr.size + '" viewBox="0 0 24 24">' + shape + '</svg>');
 					// Set fill
 					if (attr.fill !== undefined)
 						element.css('fill', attr.fill);
-					// Zoom to achieve expected size
-					if (attr.size !== undefined)
-						element.css('zoom', Math.floor(attr.size * 100.0 / 24.0) + '%');
 				};
 
 				// Render
