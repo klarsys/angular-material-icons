@@ -17,7 +17,7 @@ $ bower install angular-material-icons
 
 ## Usage
 
-Take a look at the included [demo.html](http://google.github.io/angular-material-icons/demo.html) file for usage instructions and a preview of all icons included in the set.
+Take a look at the included [demo.html](https://urmilparikh.github.io/angular-material-icons/demo.html) file for usage instructions and a preview of all icons included in the set.
 
 ## License
 
