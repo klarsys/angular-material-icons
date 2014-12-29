@@ -18,7 +18,7 @@
     "custom"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/urmilparikh/angular-material-icons",
+  "homepage": "https://github.com/klarsys/angular-material-icons",
   "ignore": [
     "**/.*",
     "node_modules",
