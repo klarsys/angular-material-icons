@@ -1,5 +1,5 @@
 /*
- * angular-material-icons v1.0.1
+ * angular-material-icons v1.0.1,
  * (c) 2014 Klar Systems
  * License: MIT
  */
@@ -778,16 +778,17 @@ angular.module('ngMdIcons', [])
 					// Check for validity of icon
 					if (icons[attr.icon] === undefined)
 						attr.icon = 'error';
+					// Check for fill
+					if (attr.fill === undefined)
+						attr.fill = 'white';
+					// Check for size
+					if (attr.size === undefined)
+						attr.size = 24;
 					// Look-up icon shape
 					var shape = icons[attr.icon];
-					// Render SVG
-					element.html('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">' + shape + '</svg>');
-					// Set fill
-					if (attr.fill !== undefined)
-						element.css('fill', attr.fill);
-					// Zoom to achieve expected size
-					if (attr.size !== undefined)
-						element.css('zoom', Math.floor(attr.size * 100.0 / 24.0) + '%');
+					// Render svg with fill
+					element.html('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="' + attr.size + '" height="' + attr.size + '" fill="' + attr.fill + '">' + icons[attr.icon] + '</svg>');
+					//element.css('fill', attr.fill);
 				};
 
 				// Render
