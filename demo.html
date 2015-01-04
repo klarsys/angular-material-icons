@@ -12,6 +12,9 @@
     <script src="demo.js"></script>
 	<style>
 		@import url(https://fonts.googleapis.com/css?family=RobotoDraft&lang=en);
+		ng-md-icon {
+			fill: white;
+		}
 		body {
 			font-family: 'RobotoDraft', Arial, sans-serif;
 			font-size: 16px;
@@ -46,25 +49,25 @@
 </head>
 
 <body ng-app="demoapp" ng-controller="democtrl">
-	<h1>Angular Material Icons v1.0.1</h1>
+	<h1>Angular Material Icons v0.1.0</h1>
 	AngularJS directive to use Material Design icons with custom fill-color and size.
 	<ul>
 		<li>Install <code>angular-material-icons</code> and dependencies using <code>bower</code>:<br><code>bower install angular-material-icons</code></li>
 		<li>Include <code>angular-material-icons.js</code> script in your html:<br><code>&lt;script src="bower_components/angular-material-icons/angular-material-icons.js"&gt;&lt;/script&gt;</code></li>
 		<li>Inject <code>ngMdIcons</code> to your application:<br><code>angular.module('demoapp', ['ngMdIcons']);</code></li>
-		<li>Use <code>ng-md-icon</code> directive in your html:
-			<br><code>&lt;ng-md-icon icon="..." fill="..." size="..."&gt;&lt;/ng-md-icon&gt;</code>
+		<li>Use <code>ng-md-icon</code> directive in your html, specifying fill-color through css:
+			<br><code>&lt;ng-md-icon icon="..." style="fill: ..." size="..."&gt;&lt;/ng-md-icon&gt;</code>
 			<br>
 			<br>
 			<div><ng-md-icon icon="send"></ng-md-icon><br>icon="send"</div>
-			<div><ng-md-icon icon="send" fill="pink"></ng-md-icon><br>icon="send"<br>fill="pink"</div>
-		 	<div><ng-md-icon icon="send" fill="#abcdef"></ng-md-icon><br>icon="send"<br>fill="#abcdef"</div>
-			<div><ng-md-icon icon="{{icon}}" fill="{{fill}}"></ng-md-icon><br>icon="{{icon}}"<br>fill="{{fill}}"</div>
+			<div><ng-md-icon icon="send" style="fill: pink"></ng-md-icon><br>icon="send"<br>style="fill: pink"</div>
+			<div><ng-md-icon icon="{{icon}}" style="fill: {{fill}}"></ng-md-icon><br>icon="{{icon}}"<br>style="fill: {{fill}}"</div>
+		 	<div><ng-md-icon icon="send" style="fill: #abcdef"></ng-md-icon><br>icon="send"<br>style="fill: #abcdef"</div>
 			<br>
-			<div><ng-md-icon icon="grade" size="12"></ng-md-icon><br>size="12"</div>
-			<div><ng-md-icon icon="grade"></ng-md-icon><br>-- no size --<br>(default is 24)</div>
-			<div><ng-md-icon icon="grade" size="36"></ng-md-icon><br>size="36"</div>
-			<div><ng-md-icon icon="grade" size="48"></ng-md-icon><br>size="48"</div>
+			<div><ng-md-icon icon="{{icon}}" style="fill: {{fill}}" size="12"></ng-md-icon><br>size="12"</div>
+			<div><ng-md-icon icon="{{icon}}" style="fill: {{fill}}"></ng-md-icon><br>-- no size --<br>(default is 24)</div>
+			<div><ng-md-icon icon="{{icon}}" style="fill: {{fill}}" size="{{size}}"></ng-md-icon><br>size="{{size}}"</div>
+			<div><ng-md-icon icon="{{icon}}" style="fill: {{fill}}" size="48"></ng-md-icon><br>size="48"</div>
 			<br>
 		</li>
 	</ul>
@@ -358,7 +361,6 @@
 	<div><ng-md-icon icon="reply_all" size="48"></ng-md-icon><br>reply_all</div>
 	<div><ng-md-icon icon="report" size="48"></ng-md-icon><br>report</div>
 	<div><ng-md-icon icon="save" size="48"></ng-md-icon><br>save</div>
-	<div><ng-md-icon icon="select_all" size="48"></ng-md-icon><br>select_all</div>
 	<div><ng-md-icon icon="send" size="48"></ng-md-icon><br>send</div>
 	<div><ng-md-icon icon="sort" size="48"></ng-md-icon><br>sort</div>
 	<div><ng-md-icon icon="text_format" size="48"></ng-md-icon><br>text_format</div>
