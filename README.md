@@ -3,7 +3,7 @@ angular-material-icons
 
 AngularJS directive to use Material Design icons with custom fill-color and size.
 
-This project is a derivative of [Google's official Material Design icon repository](https://github.com/google/material-design-icons). It encompasses all icons from that repository in SVG format in form of angular directive that gives option to specify custom fill-color and size.
+This project encompasses all svg icons from [Google's official Material Design icon repository](https://github.com/google/material-design-icons) in form of angular directive that gives option to specify custom fill-color and size.
 
 ## Installation
 
