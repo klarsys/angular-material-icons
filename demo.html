@@ -9,6 +9,7 @@
 	<title>Angular Material Icons</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
     <script src="angular-material-icons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.1.8/svg-morpheus.js"></script>
     <script src="demo.js"></script>
 	<style>
 		@import url(https://fonts.googleapis.com/css?family=RobotoDraft&lang=en);
@@ -18,7 +19,7 @@
 		body {
 			font-family: 'RobotoDraft', Arial, sans-serif;
 			font-size: 16px;
-			background-color: #9966cc;
+			background-color: #3e4f56;
 			color: white;
 			padding: 6px;
 		}
@@ -43,13 +44,17 @@
 			text-transform: capitalize;
 		}
 		code {
-			color: yellow;
+			color: #ffff99;
+		}
+		a {
+			color: aqua;
+			text-decoration: none;
 		}
 	</style>
 </head>
 
 <body ng-app="demoapp" ng-controller="democtrl">
-	<h1>Angular Material Icons v0.1.0</h1>
+	<h1>Angular Material Icons v0.2.0</h1>
 	AngularJS directive to use Material Design icons with custom fill-color and size.
 	<ul>
 		<li>Install <code>angular-material-icons</code> and dependencies using <code>bower</code>:<br><code>bower install angular-material-icons</code></li>
@@ -70,6 +75,7 @@
 			<div><ng-md-icon icon="{{icon}}" style="fill: {{fill}}" size="48"></ng-md-icon><br>size="48"</div>
 			<br>
 		</li>
+		<li>Optional: Include <a href="https://github.com/alexk111/SVG-Morpheus" target="_blank">SVG-Morpheus</a> in your project and icons will morph as seen above.</li>
 	</ul>
 
 	<h1>Full list of icons:</h1>
