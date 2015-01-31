@@ -816,7 +816,7 @@ angular.module('ngMdIcons', [])
                         // render new and old icons (old icon will be shown by default)
                         element.html('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="' + size + '" height="' + size + '"><g id="' + newicon + '" style="display:none">' + shapes[newicon] + '</g><g id="' + icon + '" style="display:none">' + shapes[icon] + '</g></svg>');
                         // morph
-                        new SVGMorpheus(element.children()[0]).to(newicon);
+                        new SVGMorpheus(element.children()[0]).to(newicon, JSON.parse(attr.options || null), attr.callback);
                     } catch (error) {
                         // fallback
                         element.html('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="' + size + '" height="' + size + '">' + shapes[newicon] + '</svg>');
