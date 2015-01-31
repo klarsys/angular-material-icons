@@ -57,11 +57,12 @@
     <h1>Angular Material Icons v0.3.0</h1>
     AngularJS directive to use Material Design icons with custom fill-color and size.
     <ul>
-        <li>Install <code>angular-material-icons</code> using <a href="#" ng-click="command='bower install angular-material-icons';">bower</a> / <a href="#" ng-click="command='npm install angular-material-icons';">npm</a> or clone it directly from <a href="#" ng-click="command='git clone https://github.com/klarsys/angular-material-icons.git';">github</a>.
+        <li>For production, use minified version directly from CDN:
+            <br><code>&lt;script src="//cdn.jsdelivr.net/angular-material-icons/0.3.0/angular-material-icons.min.js"&gt;&lt;/script&gt;</code>
+            <br>
+            <br>
+            For other purposes, project files are available via <a href="#" ng-click="command='bower install angular-material-icons';">bower</a> / <a href="#" ng-click="command='npm install angular-material-icons';">npm</a> or can be cloned directly from <a href="#" ng-click="command='git clone https://github.com/klarsys/angular-material-icons.git';">github</a>.
             <br><code>{{command}}</code>
-        </li>
-        <li>Include <code>angular-material-icons.min.js</code> script in your html:
-            <br><code>&lt;script src="path/to/angular-material-icons.min.js"&gt;&lt;/script&gt;</code>
         </li>
         <li>Inject <code>ngMdIcons</code> to your angularjs application:
             <br><code>angular.module('demoapp', ['ngMdIcons']);</code>
@@ -81,7 +82,9 @@
             <div><ng-md-icon icon="{{icon}}" style="fill: {{fill}}" size="64"></ng-md-icon><br>size="64"</div>
             <br>
         </li>
-        <li>Optional: Include <a href="https://github.com/alexk111/SVG-Morpheus" target="_blank">SVG-Morpheus</a> in your project and changes to icon attribute will morph as seen above.</li>
+        <li>Optional: Include <a href="https://github.com/alexk111/SVG-Morpheus" target="_blank">SVG-Morpheus</a> in your project and changes to icon will go through delightful morphing as seen above.
+            <br><code>&lt;script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.1.8/svg-morpheus.js"&gt;&lt;/script&gt;</code>
+        </li>
     </ul>
 
     <h1>Full list of icons:</h1>
