@@ -9,7 +9,7 @@ Changes to icon will go through delightful morphing if [SVG-Morpheus](https://gi
 
 ## Demo
 
-See the [live demo](https://klarsys.github.io/angular-material-icons/) for usage instructions and a preview of all icons included in the set.
+Checkout the [live demo](https://klarsys.github.io/angular-material-icons/) for usage instructions and a preview of all icons included in the set.
 
 ## Licenses
 

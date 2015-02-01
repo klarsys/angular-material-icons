@@ -5,7 +5,7 @@
     "Urmil Parikh <urmil@klarsys.com>"
   ],
   "description": "AngularJS directive to use Material Design icons with custom fill color and size.",
-  "main": "angular-material-icons.js",
+  "main": "angular-material-icons.min.js",
   "keywords": [
     "angular",
     "material",
@@ -21,14 +21,14 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/klarsys/angular-material-icons",
+  "dependencies": {
+    "angular": "1.3.x"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-  	"angular": "1.3.x"
-  }
+  ]
 }
