@@ -54,11 +54,15 @@
 </head>
 
 <body ng-app="demoapp" ng-controller="democtrl">
-    <h1>Angular Material Icons v0.3.0</h1>
+
+    <!-- GitHub ribbon -->
+    <a href="https://github.com/klarsys/angular-material-icons"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+    <h1>Angular Material Icons v0.4.0</h1>
     AngularJS directive to use Material Design icons with custom fill-color and size.
     <ul>
         <li>For production, use minified version directly from CDN:
-            <br><code>&lt;script src="//cdn.jsdelivr.net/angular-material-icons/0.3.0/angular-material-icons.min.js"&gt;&lt;/script&gt;</code>
+            <br><code>&lt;script src="//cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"&gt;&lt;/script&gt;</code>
             <br>
             <br>
             For other purposes, project files are available via <a href="#" ng-click="command='bower install angular-material-icons';">bower</a> / <a href="#" ng-click="command='npm install angular-material-icons';">npm</a> or can be cloned directly from <a href="#" ng-click="command='git clone https://github.com/klarsys/angular-material-icons.git';">github</a>.
@@ -84,6 +88,15 @@
         </li>
         <li>Optional: Include <a href="https://github.com/alexk111/SVG-Morpheus" target="_blank">SVG-Morpheus</a> in your project and changes to icon will go through delightful morphing as seen above.
             <br><code>&lt;script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.1.8/svg-morpheus.js"&gt;&lt;/script&gt;</code>
+            <br>
+            <br>When SVG-Morpheus is included, you can use <code>options</code> attribute to control <a href="https://github.com/alexk111/SVG-Morpheus#options" target="_blank">morphing options</a>.
+            <br>
+            <br>
+            <div><ng-md-icon icon="{{icon}}" style="fill: {{fill}}" size="48" options='{"duration": 375}'></ng-md-icon><br>options=<br>'{"duration": 375}'<br>(default is 750)</div>
+            <div><ng-md-icon icon="{{icon}}" style="fill: {{fill}}" size="48" options='{"rotation": "none"}'></ng-md-icon><br>options=<br>'{"rotation": "none"}'<br>(default is clock)</div>
+            <div><ng-md-icon icon="{{icon}}" style="fill: {{fill}}" size="48" options='{"rotation": "counterclock"}'></ng-md-icon><br>options=<br>'{"rotation": "counterclock"}'</div>
+            <br>
+            <br>Note that <code>options</code> attribute is a JSON parse-able string so surround keys with double-quotes.
         </li>
     </ul>
 
@@ -376,6 +389,7 @@
     <div><ng-md-icon icon="reply_all" size="48"></ng-md-icon><br>reply_all</div>
     <div><ng-md-icon icon="report" size="48"></ng-md-icon><br>report</div>
     <div><ng-md-icon icon="save" size="48"></ng-md-icon><br>save</div>
+    <div><ng-md-icon icon="select_all" size="48"></ng-md-icon><br>select_all</div>
     <div><ng-md-icon icon="send" size="48"></ng-md-icon><br>send</div>
     <div><ng-md-icon icon="sort" size="48"></ng-md-icon><br>sort</div>
     <div><ng-md-icon icon="text_format" size="48"></ng-md-icon><br>text_format</div>
