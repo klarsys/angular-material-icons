@@ -3,7 +3,7 @@
   "version": "0.4.0",
   "author": "Urmil Parikh",
   "description": "AngularJS directive to use Material Design icons with custom fill color and size.",
-  "main": "angular-material-icons.min.js",
+  "main": "angular-material-icons.js",
   "keywords": [
     "angular",
     "material",
