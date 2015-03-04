@@ -15,6 +15,16 @@
         @import url(https://fonts.googleapis.com/css?family=RobotoDraft&lang=en);
         ng-md-icon {
             fill: white;
+            -webkit-transition: fill 750ms ease-in-out;
+            -moz-transition: fill 750ms ease-in-out;
+            -o-transition: fill 750ms ease-in-out;
+            transition: fill 750ms ease-in-out;
+        }
+        ng-md-icon > svg {
+            -webkit-transition: width 750ms ease-in-out, height 750ms ease-in-out;
+            -moz-transition: width 750ms ease-in-out, height 750ms ease-in-out;
+            -o-transition: width 750ms ease-in-out, height 750ms ease-in-out;
+            transition: width 750ms ease-in-out, height 750ms ease-in-out;
         }
         body {
             font-family: 'RobotoDraft', Arial, sans-serif;
