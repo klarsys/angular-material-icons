@@ -15,6 +15,16 @@
         @import url(https://fonts.googleapis.com/css?family=RobotoDraft&lang=en);
         ng-md-icon {
             fill: white;
+            -webkit-transition: fill 750ms ease-in-out;
+            -moz-transition: fill 750ms ease-in-out;
+            -o-transition: fill 750ms ease-in-out;
+            transition: fill 750ms ease-in-out;
+        }
+        ng-md-icon > svg {
+            -webkit-transition: width 750ms ease-in-out, height 750ms ease-in-out;
+            -moz-transition: width 750ms ease-in-out, height 750ms ease-in-out;
+            -o-transition: width 750ms ease-in-out, height 750ms ease-in-out;
+            transition: width 750ms ease-in-out, height 750ms ease-in-out;
         }
         body {
             font-family: 'RobotoDraft', Arial, sans-serif;
@@ -89,7 +99,8 @@
         <li>This directive is tested on Chrome and Firefox.
         	<br>For IE, use <code>ng-attr-style</code> instead of <code>style</code>. Also refer AngularJS documentation on <a href="https://docs.angularjs.org/guide/ie" target="_blank">IE Compatibility</a>.
         </li>
-        <li>Optional: Include <a href="https://github.com/alexk111/SVG-Morpheus" target="_blank">SVG-Morpheus</a> in your project and changes to icon will go through delightful morphing as seen above.
+        <li>Optional: Include <a href="https://github.com/alexk111/SVG-Morpheus" target="_blank">SVG-Morpheus</a> in your project and changes to <code>icon</code> attribute that you do through your controller will go through delightful morphing as seen above.
+        	<br>Refer code for this page (index.html and demo.js) for details.
             <br><code>&lt;script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.1.8/svg-morpheus.js"&gt;&lt;/script&gt;</code>
             <br>
             <br>When SVG-Morpheus is included, you can use <code>options</code> attribute to control <a href="https://github.com/alexk111/SVG-Morpheus#options" target="_blank">morphing options</a>.
@@ -866,6 +877,9 @@
     <div><ng-md-icon icon="star" size="48"></ng-md-icon><br>star</div>
     <div><ng-md-icon icon="star_half" size="48"></ng-md-icon><br>star_half</div>
     <div><ng-md-icon icon="star_outline" size="48"></ng-md-icon><br>star_outline</div>
+
+    <h2>additional</h2>
+    <div><ng-md-icon icon="live_circle" size="48"></ng-md-icon><br>live_circle</div>
 
 </body>
 

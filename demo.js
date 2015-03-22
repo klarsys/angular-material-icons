@@ -11,13 +11,12 @@ angular.module('demoapp', ['ngMdIcons'])
             var random = Math.random();
             if (random < 0.2) {
                 $scope.size = 28 + 4 * Math.floor(Math.random() * 9);
-            } else if (random < 0.4) {
-                $scope.fill = colors[Math.floor(Math.random() * colors.length)];
             } else {
                 $scope.cnt++;
                 if ($scope.cnt >= icons.length)
                     $scope.cnt = 0;
                 $scope.icon = icons[$scope.cnt];
+                $scope.fill = colors[Math.floor(Math.random() * colors.length)];
             }
             $scope.$apply();
         }, 1700);
