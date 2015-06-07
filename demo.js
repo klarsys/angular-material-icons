@@ -7,6 +7,14 @@ angular.module('demoapp', ['ngMdIcons'])
         $scope.fill = colors[0];
         $scope.size = 48;
 
+        $scope.clickIcon = 'thumb_up';
+        $scope.clickIconMorph = function () {
+            if ($scope.clickIcon == 'thumb_up')
+                $scope.clickIcon = 'thumb_down';
+            else
+                $scope.clickIcon = 'thumb_up';
+        }
+
         setInterval(function() {
             var random = Math.random();
             if (random < 0.2) {

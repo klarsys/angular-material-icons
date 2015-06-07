@@ -109,6 +109,7 @@
             <div><ng-md-icon icon="{{icon}}" ng-attr-style="fill: {{fill}}" size="48" options='{"duration": 375}'></ng-md-icon><br>options=<br>'{"duration": 375}'<br>(default is 750)</div>
             <div><ng-md-icon icon="{{icon}}" ng-attr-style="fill: {{fill}}" size="48" options='{"rotation": "none"}'></ng-md-icon><br>options=<br>'{"rotation": "none"}'<br>(default is clock)</div>
             <div><ng-md-icon icon="{{icon}}" ng-attr-style="fill: {{fill}}" size="48" options='{"rotation": "counterclock"}'></ng-md-icon><br>options=<br>'{"rotation": "counterclock"}'</div>
+            <div><ng-md-icon icon="{{clickIcon}}" ng-attr-style="fill: {{fill}}" size="48" options='{"duration": 375, "rotation": "none"}' ng-click="clickIconMorph()"></ng-md-icon><br>Example:<br>Morph on ng-click</div>
             <br>
             <br>Note that <code>options</code> attribute is a JSON parse-able string so surround keys with double-quotes.
         </li>
