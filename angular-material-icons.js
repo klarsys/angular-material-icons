@@ -1,5 +1,5 @@
 /*
- * angular-material-icons v0.5.0
+ * angular-material-icons v0.5.1
  * (c) 2014 Klar Systems
  * License: MIT
  */
@@ -7,9 +7,11 @@
 'use strict';
 
 angular.module('ngMdIcons', [])
-    .directive('ngMdIcon', function() {
-
-        var shapes = {
+    .factory('ShapeService', function() {
+        
+        var shapeService = {};
+        
+        shapeService.shapes = {
             // materialdesignicons.com
             'amazon': '<path d="M13.23 10.56V10c-1.94 0-3.99.39-3.99 2.67 0 1.16.61 1.95 1.63 1.95.76 0 1.43-.47 1.86-1.22.52-.93.5-1.8.5-2.84m2.7 6.53c-.18.16-.43.17-.63.06-.89-.74-1.05-1.08-1.54-1.79-1.47 1.5-2.51 1.95-4.42 1.95-2.25 0-4.01-1.39-4.01-4.17 0-2.18 1.17-3.64 2.86-4.38 1.46-.64 3.49-.76 5.04-.93V7.5c0-.66.05-1.41-.33-1.96-.32-.49-.95-.7-1.5-.7-1.02 0-1.93.53-2.15 1.61-.05.24-.25.48-.47.49l-2.6-.28c-.22-.05-.46-.22-.4-.56.6-3.15 3.45-4.1 6-4.1 1.3 0 3 .35 4.03 1.33C17.11 4.55 17 6.18 17 7.95v4.17c0 1.25.5 1.81 1 2.48.17.25.21.54 0 .71l-2.06 1.78h-.01"/><path d="M20.16 19.54C18 21.14 14.82 22 12.1 22c-3.81 0-7.25-1.41-9.85-3.76-.2-.18-.02-.43.25-.29 2.78 1.63 6.25 2.61 9.83 2.61 2.41 0 5.07-.5 7.51-1.53.37-.16.66.24.32.51"/><path d="M21.07 18.5c-.28-.36-1.85-.17-2.57-.08-.19.02-.22-.16-.03-.3 1.24-.88 3.29-.62 3.53-.33.24.3-.07 2.35-1.24 3.32-.18.16-.35.07-.26-.11.26-.67.85-2.14.57-2.5z"/>',
             'apple': '<path d="M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83"/>',
@@ -797,6 +799,10 @@ angular.module('ngMdIcons', [])
             'live_circle': '<path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM4 9.094h1.188v4.844h2.53v.968H4V9.094zm4.5 0h1.188v5.812H8.5V9.094zm1.78 0h1.345l1.28 4.375 1.345-4.377h1.313l-2 5.812h-1.25l-2.033-5.81zm5.845 0H20v.97l-2.688-.002v1.376h2.282v.937h-2.282v1.563H20v.968h-3.875V9.094z"/>',
         };
 
+        return shapeService;
+    })
+    .directive('ngMdIcon', function(ShapeService) {
+
         return {
             restrict: 'AE',
             link: function(scope, element, attr) {
@@ -816,7 +822,7 @@ angular.module('ngMdIcons', [])
                     } else
                         icon = 'help';
                     // validate
-                    if (shapes[icon] === undefined)
+                    if (ShapeService.shapes[icon] === undefined)
                         icon = 'help';
 
                     // size
@@ -826,23 +832,23 @@ angular.module('ngMdIcons', [])
                         size = 24;
 
                     // render
-                    element.html('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="' + size + '" height="' + size + '">' + shapes[icon] + '</svg>');
+                    element.html('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="' + size + '" height="' + size + '">' + ShapeService.shapes[icon] + '</svg>');
                 };
 
                 var replace = function(newicon) {
                     // validate
-                    if (shapes[newicon] === undefined)
+                    if (ShapeService.shapes[newicon] === undefined)
                         newicon = 'help';
                     if (newicon == icon) return;
                     try {
                         // this block will succeed if SVGMorpheus is available
                         // render new and old icons (old icon will be shown by default)
-                        element.html('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="' + size + '" height="' + size + '"><g id="' + newicon + '" style="display:none">' + shapes[newicon] + '</g><g id="' + icon + '" style="display:none">' + shapes[icon] + '</g></svg>');
+                        element.html('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="' + size + '" height="' + size + '"><g id="' + newicon + '" style="display:none">' + ShapeService.shapes[newicon] + '</g><g id="' + icon + '" style="display:none">' + ShapeService.shapes[icon] + '</g></svg>');
                         // morph
                         new SVGMorpheus(element.children()[0]).to(newicon, JSON.parse(attr.options || null));
                     } catch (error) {
                         // fallback
-                        element.html('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="' + size + '" height="' + size + '">' + shapes[newicon] + '</svg>');
+                        element.html('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="' + size + '" height="' + size + '">' + ShapeService.shapes[newicon] + '</svg>');
                     }
                     icon = newicon;
                 }
