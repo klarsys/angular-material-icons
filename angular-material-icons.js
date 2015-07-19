@@ -798,7 +798,7 @@ angular.module('ngMdIcons', [])
         };
 
         return {
-            restrict: 'E',
+            restrict: 'AE',
             link: function(scope, element, attr) {
 
                 var icon, size;
