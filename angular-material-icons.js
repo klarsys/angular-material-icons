@@ -14,7 +14,7 @@ angular.module('ngMdIcons', [])
             restrict: 'AE',
             link: function(scope, element, attr) {
 
-                var icon, size;
+                var icon, size, viewBox;
 
                 var render = function() {
                     // icon
@@ -38,8 +38,14 @@ angular.module('ngMdIcons', [])
                     else if (size !== null)
                         size = 24;
 
+                    // viewBox
+                    if (attr.viewBox !== undefined)
+                        viewBox = attr.viewBox;
+                    else
+                        viewBox = '0 0 24 24';
+
                     // render
-                    element.html('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="' + size + '" height="' + size + '">' + shapes[icon] + '</svg>');
+                    element.html('<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + viewBox + '" width="' + size + '" height="' + size + '">' + shapes[icon] + '</svg>');
                 };
 
                 var replace = function(newicon) {
