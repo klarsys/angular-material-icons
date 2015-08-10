@@ -95,6 +95,14 @@ angular.module('ngMdIcons', [])
 
         function addShape(name, svg) {
             shapes[name] = svg;
+
+            return provider; // chainable function
+        }
+
+        function addShapes(newShapes) {
+            shapes = angular.extend(shapes, newShapes);
+
+            return provider; // chainable function
         }
 
         function getShape(name) {
