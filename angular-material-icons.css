@@ -79,6 +79,7 @@ ng-md-icon {
 
 ng-md-icon svg {
     pointer-events: none;
+    display: block;
 }
 
 ng-md-icon[md-font-icon] {
