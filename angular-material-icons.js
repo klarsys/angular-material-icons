@@ -83,33 +83,32 @@ angular.module('ngMdIcons', [])
         }
     })
     .provider('ngMdIconService', function () {
-        var provider, service, shapes;
+        var service, shapes;
 
         shapes = includedShapes();
 
         service = {
-            getShape : getShape,
-            getShapes: getShapes
-        };
-
-        provider = {
             $get     : ngMdIconServiceFactory,
+            getShape : getShape,
+            getShapes: getShapes,
+            setShape : addShape,
+            setShapes: addShapes,
             addShape : addShape,
             addShapes: addShapes
         };
 
-        return provider;
+        return service;
 
-        function addShape(name, svg) {
-            shapes[name] = svg;
+        function addShape(name, shape) {
+            shapes[name] = shape;
 
-            return provider; // chainable function
+            return service; // chainable function
         }
 
         function addShapes(newShapes) {
             shapes = angular.extend(shapes, newShapes);
 
-            return provider; // chainable function
+            return service; // chainable function
         }
 
         function getShape(name) {
@@ -909,7 +908,6 @@ angular.module('ngMdIcons', [])
                 'live_circle': '<path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM4 9.094h1.188v4.844h2.53v.968H4V9.094zm4.5 0h1.188v5.812H8.5V9.094zm1.78 0h1.345l1.28 4.375 1.345-4.377h1.313l-2 5.812h-1.25l-2.033-5.81zm5.845 0H20v.97l-2.688-.002v1.376h2.282v.937h-2.282v1.563H20v.968h-3.875V9.094z"/>'
             };
         }
-
 
         function ngMdIconServiceFactory() {
             return service;
