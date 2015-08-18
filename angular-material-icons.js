@@ -7,7 +7,7 @@
 'use strict';
 
 angular.module('ngMdIcons', [])
-    .directive('ngMdIcon', function (ngMdIconService) {
+    .directive('ngMdIcon', ['ngMdIconService', function (ngMdIconService) {
         var shapes = ngMdIconService.getShapes();
 
         return {
@@ -81,7 +81,7 @@ angular.module('ngMdIcons', [])
                 if (attr.size !== undefined) attr.$observe('size', resize);
             }
         }
-    })
+    }])
     .provider('ngMdIconService', function () {
         var service, shapes;
 
