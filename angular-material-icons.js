@@ -4,6 +4,7 @@
  * License: MIT
  */
 
+/* jshint -W097, -W101 */
 'use strict';
 
 angular.module('ngMdIcons', [])
@@ -26,23 +27,29 @@ angular.module('ngMdIcons', [])
                             icon = ss[1];
                             size = ss[2];
                         }
-                    } else
+                    } else {
                         icon = 'help';
+                    }
                     // validate
-                    if (shapes[icon] === undefined)
+                    if (shapes[icon] === undefined) {
                         icon = 'help';
+                    }
 
                     // size
-                    if (attr.size !== undefined)
+                    if (attr.size !== undefined) {
                         size = attr.size;
-                    else if (size !== null)
+                    }
+                    else if (size !== null) {
                         size = 24;
+                    }
 
                     // viewBox
-                    if (attr.viewBox !== undefined)
+                    if (attr.viewBox !== undefined) {
                         viewBox = attr.viewBox;
-                    else
+                    }
+                    else {
                         viewBox = '0 0 24 24';
+                    }
 
                     // render
                     element.html('<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + viewBox + '" width="' + size + '" height="' + size + '">' + shapes[icon] + '</svg>');
@@ -50,9 +57,10 @@ angular.module('ngMdIcons', [])
 
                 var replace = function(newicon) {
                     // validate
-                    if (shapes[newicon] === undefined)
+                    if (shapes[newicon] === undefined) {
                         newicon = 'help';
-                    if (newicon == icon) return;
+                    }
+                    if (newicon === icon) { return; }
                     try {
                         // this block will succeed if SVGMorpheus is available
                         // render new and old icons (old icon will be shown by default)
@@ -67,7 +75,7 @@ angular.module('ngMdIcons', [])
                 };
 
                 var resize = function(newsize) {
-                    if (newsize == size) return;
+                    if (newsize === size) { return; }
                     element.children()[0].setAttribute('width', newsize);
                     element.children()[0].setAttribute('height', newsize);
                     size = newsize;
@@ -77,10 +85,10 @@ angular.module('ngMdIcons', [])
                 render();
 
                 // watch for any changes
-                if (attr.icon !== undefined) attr.$observe('icon', replace);
-                if (attr.size !== undefined) attr.$observe('size', resize);
+                if (attr.icon !== undefined) { attr.$observe('icon', replace); }
+                if (attr.size !== undefined) { attr.$observe('size', resize);  }
             }
-        }
+        };
     }])
     .provider('ngMdIconService', function () {
         var service, shapes;
