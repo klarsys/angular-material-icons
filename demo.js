@@ -1,3 +1,6 @@
+/* jshint -W097, -W101 */
+'use strict';
+
 angular.module('demoapp', ['ngMdIcons'])
     .controller('democtrl', ['$scope', function($scope) {
         var icons = [
@@ -12,11 +15,13 @@ angular.module('demoapp', ['ngMdIcons'])
 
         $scope.clickIcon = 'thumb_up';
         $scope.clickIconMorph = function() {
-            if ($scope.clickIcon == 'thumb_up')
+            if ($scope.clickIcon === 'thumb_up') {
                 $scope.clickIcon = 'thumb_down';
-            else
+            }
+            else {
                 $scope.clickIcon = 'thumb_up';
-        }
+            }
+        };
 
         setInterval(function() {
             var random = Math.random();
@@ -24,8 +29,9 @@ angular.module('demoapp', ['ngMdIcons'])
                 $scope.size = 28 + 4 * Math.floor(Math.random() * 9);
             } else {
                 $scope.cnt++;
-                if ($scope.cnt >= icons.length)
+                if ($scope.cnt >= icons.length) {
                     $scope.cnt = 0;
+                }
                 $scope.icon = icons[$scope.cnt];
                 $scope.fill = colors[Math.floor(Math.random() * colors.length)];
             }
