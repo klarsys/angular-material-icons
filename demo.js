@@ -40,10 +40,13 @@ angular.module('demoapp', ['ngMdIcons'])
     }])
     .config(['ngMdIconServiceProvider', function(ngMdIconServiceProvider) {
         ngMdIconServiceProvider
-            .addShape('custom-bookmark', '<path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>')
+            // Add single icon
+            .addShape('standby', '<path d="M13 3.5h-2v10h2v-10z"/><path d="M16.56 5.94l-1.45 1.45C16.84 8.44 18 10.33 18 12.5c0 3.31-2.69 6-6 6s-6-2.69-6-6c0-2.17 1.16-4.06 2.88-5.12L7.44 5.94C5.36 7.38 4 9.78 4 12.5c0 4.42 3.58 8 8 8s8-3.58 8-8c0-2.72-1.36-5.12-3.44-6.56z"/>')
+            // Get an existing icon
             .addShape('custom-delete', ngMdIconServiceProvider.getShape('delete'))
+            // Add multiple icons
             .addShapes({
-                'custom-done': '<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>',
-                'custom-home': '<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>'
+                'marker': '<path d="M18.632 8.21A6.632 6.632 0 0 1 12 14.843a6.632 6.632 0 0 1-6.632-6.63A6.632 6.632 0 0 1 12 1.578a6.632 6.632 0 0 1 6.632 6.63zM12 0C7.465 0 3.79 3.676 3.79 8.21c0 3.755 2.52 6.917 5.96 7.895L12 24l2.25-7.895c3.44-.978 5.96-4.14 5.96-7.894C20.21 3.677 16.536 0 12 0z">',
+                'live_circle': '<path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM4 9.094h1.188v4.844h2.53v.968H4V9.094zm4.5 0h1.188v5.812H8.5V9.094zm1.78 0h1.345l1.28 4.375 1.345-4.377h1.313l-2 5.812h-1.25l-2.033-5.81zm5.845 0H20v.97l-2.688-.002v1.376h2.282v.937h-2.282v1.563H20v.968h-3.875V9.094z"/>'
             });
     }]);
