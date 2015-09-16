@@ -63,17 +63,17 @@
     </style>
 </head>
 
-<body ng-app="demoapp" ng-controller="democtrl">
+<body ng-app="demoapp" ng-controller="democtrl" ng-strict-di>
 
     <!-- GitHub ribbon -->
     <a href="https://github.com/klarsys/angular-material-icons"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 
-    <h1>Angular Material Icons v0.5.0</h1>
+    <h1>Angular Material Icons v0.6.0</h1>
     AngularJS directive to use Material Design icons with custom fill-color and size.
     <ul>
         <li>For production, use minified version directly from CDN:
             <!-- https://www.cdnperf.com/#cdnjs,jsdelivr/https/90 -->
-            <br><code>&lt;script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js"&gt;&lt;/script&gt;</code>
+            <br><code>&lt;script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.6.0/angular-material-icons.min.js"&gt;&lt;/script&gt;</code>
             <br>
             <br>
             For other purposes, project files are available via <a href="#" ng-click="command='bower install angular-material-icons';">bower</a> / <a href="#" ng-click="command='npm install angular-material-icons';">npm</a> or can be cloned directly from <a href="#" ng-click="command='git clone https://github.com/klarsys/angular-material-icons.git';">github</a>.
@@ -97,7 +97,7 @@
             <div><ng-md-icon icon="{{icon}}" ng-attr-style="fill: {{fill}}" size="64"></ng-md-icon><br>size="64"</div>
             <br>
         </li>
-        <li>This directive is tested on Chrome and Firefox.
+        <li>This directive is tested on Chrome, Firefox, Safari and Edge.
             <br>For IE, use <code>ng-attr-style</code> instead of <code>style</code>. Also refer AngularJS documentation on <a href="https://docs.angularjs.org/guide/ie" target="_blank">IE Compatibility</a>.
         </li>
         <li>Optional: Include <a href="https://github.com/alexk111/SVG-Morpheus" target="_blank">SVG-Morpheus</a> in your project and changes to <code>icon</code> attribute that you do through your controller will go through delightful morphing as seen above.
@@ -113,6 +113,13 @@
             <div><ng-md-icon icon="{{clickIcon}}" ng-attr-style="fill: {{fill}}" size="48" options='{"duration": 375, "rotation": "none"}' ng-click="clickIconMorph()"></ng-md-icon><br>Example:<br>Morph on ng-click</div>
             <br>
             <br>Note that <code>options</code> attribute is a JSON parse-able string so surround keys with double-quotes.
+        </li>
+        <li>Advanced: Refer <a href="https://github.com/klarsys/angular-material-icons/blob/master/demo.js" target="_blank">demo.js</a> to register custom icons for your project or to access default icon shapes from a controller or another service.
+            <br>
+            <div><ng-md-icon icon="standby" ng-attr-style="fill: {{fill}}" size="48"></ng-md-icon><br>standby</div>
+            <div><ng-md-icon icon="custom-delete" ng-attr-style="fill: {{fill}}" size="48"></ng-md-icon><br>custom-delete</div>
+            <div><ng-md-icon icon="marker" ng-attr-style="fill: {{fill}}" size="48"></ng-md-icon><br>marker</div>
+            <div><ng-md-icon icon="live_circle" ng-attr-style="fill: {{fill}}" size="48"></ng-md-icon><br>live_circle</div>
         </li>
     </ul>
 
@@ -901,9 +908,6 @@
     <div><ng-md-icon icon="star" size="48"></ng-md-icon><br>star</div>
     <div><ng-md-icon icon="star_half" size="48"></ng-md-icon><br>star_half</div>
     <div><ng-md-icon icon="star_outline" size="48"></ng-md-icon><br>star_outline</div>
-
-    <h2>additional</h2>
-    <div><ng-md-icon icon="live_circle" size="48"></ng-md-icon><br>live_circle</div>
 
 </body>
 
