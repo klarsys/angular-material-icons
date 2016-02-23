@@ -7,6 +7,11 @@ This project encompasses all SVG icons from [Google's official Material Design I
 
 Changes to icon will go through delightful morphing if [SVG-Morpheus](https://github.com/alexk111/SVG-Morpheus) is also included in your application.
 
+## Installation
+This library is available via bower and npm
+* `bower install angular-material-icons`
+* `npm install angular-material-icons`
+
 ## Configure own icons
 add many icons
 ```javascript
