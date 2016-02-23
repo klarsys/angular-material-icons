@@ -48,7 +48,9 @@ angular.module('ngMdIcons', [])
                         viewBox = attr.viewBox;
                     }
                     else {
-                        viewBox = '0 0 24 24';
+                        viewBox = ngMdIconService.getViewBox(icon)
+                            ? ngMdIconService.getViewBox(icon)
+                            : '0 0 24 24';
                     }
 
                     // render
@@ -91,27 +93,40 @@ angular.module('ngMdIcons', [])
         };
     }])
     .provider('ngMdIconService', function () {
-        var provider, service, shapes;
+        var provider, service, shapes, viewBoxes;
 
         shapes = includedShapes();
+        viewBoxes = {};
 
         service = {
             getShape : getShape,
             getShapes: getShapes,
+            getViewBox : getViewBox,
+            getViewBoxes: getViewBoxes,
             setShape : addShape,
             setShapes: addShapes,
+            setViewBox : addViewBox,
+            setViewBoxes: addViewBoxes,
             addShape : addShape,
-            addShapes: addShapes
+            addShapes: addShapes,
+            addViewBox : addViewBox,
+            addViewBoxes: addViewBoxes
         };
 
         provider = {
             $get     : ngMdIconServiceFactory,
             getShape : getShape,
             getShapes: getShapes,
+            getViewBox : getViewBox,
+            getViewBoxes: getViewBoxes,
             setShape : addShape,
             setShapes: addShapes,
+            setViewBox : addViewBox,
+            setViewBoxes: addViewBoxes,
             addShape : addShape,
-            addShapes: addShapes
+            addShapes: addShapes,
+            addViewBox : addViewBox,
+            addViewBoxes: addViewBoxes
         };
 
         return provider;
@@ -128,12 +143,32 @@ angular.module('ngMdIcons', [])
             return provider; // chainable function
         }
 
+        function addViewBox(name, viewBox) {
+            viewBoxes[name] = viewBox;
+
+            return provider; // chainable function
+        }
+
+        function addViewBoxes(newViewBoxes) {
+            viewBoxes = angular.extend(viewBoxes, newViewBoxes);
+
+            return provider; // chainable function
+        }
+
         function getShape(name) {
             return shapes[name];
         }
 
         function getShapes() {
             return shapes;
+        }
+
+        function getViewBox(name) {
+            return viewBoxes[name];
+        }
+
+        function getViewBoxes() {
+            return viewBoxes;
         }
 
         function includedShapes() {
