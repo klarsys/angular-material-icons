@@ -1,5 +1,5 @@
 /*
- * angular-material-icons v0.6.0
+ * angular-material-icons v0.7.0
  * (c) 2014 Klar Systems
  * License: MIT
  */
@@ -48,9 +48,7 @@ angular.module('ngMdIcons', [])
                         viewBox = attr.viewBox;
                     }
                     else {
-                        viewBox = ngMdIconService.getViewBox(icon)
-                            ? ngMdIconService.getViewBox(icon)
-                            : '0 0 24 24';
+                        viewBox = ngMdIconService.getViewBox(icon) ? ngMdIconService.getViewBox(icon) : '0 0 24 24';
                     }
 
                     // render
