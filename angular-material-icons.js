@@ -1,5 +1,5 @@
 /*
- * angular-material-icons v0.7.0
+ * angular-material-icons v0.7.1
  * (c) 2014 Klar Systems
  * License: MIT
  */
