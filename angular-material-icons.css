@@ -87,6 +87,10 @@ ng-md-icon[md-font-icon] {
     width: auto;
 }
 
+ng-md-icon[disabled] svg {
+    fill: rgba(0, 0, 0, 0.26);
+}
+
 md-input-container > ng-md-icon {
     position: absolute;
     top: 5px;
