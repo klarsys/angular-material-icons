@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/angular-material-icons.png?downloadRank=true)](https://nodei.co/npm/angular-material-icons/)
+
 angular-material-icons
 ======================
 
