@@ -13,7 +13,7 @@ angular.module('demoapp', ['ngMdIcons'])
             //
             //Material Icons
             //
-            'amazon', 'apple', 'facebook-box', 'facebook-messenger', 'facebook', 'github-box', 'github-circle', 'google-plus-box', 'google-plus', 'hangouts', 'linkedin-box', 'linkedin', 'login', 'logout', 'office', 'twitter', 'whatsapp', 'windows',
+            'amazon', 'apple', 'facebook-box', 'facebook-messenger', 'facebook', 'github-box', 'github-circle', 'google-plus-box', 'google-plus', 'hangouts', 'linkedin-box', 'linkedin', 'login', 'logout', 'office', 'twitter', 'whatsapp', 'windows', 'pin', 'pin-off'
 
             //
             //Custom Icons
