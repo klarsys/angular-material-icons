@@ -86,8 +86,8 @@ angular.module('ngMdIcons', [])
                 render();
 
                 // watch for any changes
-                if (attr.icon !== undefined) { attr.$observe('icon', replace); }
-                if (attr.size !== undefined) { attr.$observe('size', resize);  }
+                if (attr.icon !== undefined) { attr.$observe('icon', replace); scope.$watch(attr.icon, replace); }
+                if (attr.size !== undefined) { attr.$observe('size', resize); }
             }
         };
     }])
