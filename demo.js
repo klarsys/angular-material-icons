@@ -1,5 +1,5 @@
 /*
- * angular-material-icons v0.7.1
+ * angular-material-icons v0.7.2
  * (c) 2014-2016 Klar Systems
  * License: MIT
  */
@@ -13,7 +13,7 @@ angular.module('demoapp', ['ngMdIcons'])
             //
             //Material Icons
             //
-            'amazon', 'apple', 'facebook-box', 'facebook-messenger', 'facebook', 'github-box', 'github-circle', 'google-plus-box', 'google-plus', 'hangouts', 'linkedin-box', 'linkedin', 'login', 'logout', 'office', 'twitter', 'whatsapp', 'windows', 'pin', 'pin-off'
+            'amazon', 'apple', 'facebook-box', 'facebook-messenger', 'facebook', 'github-box', 'github-circle', 'google-plus-box', 'google-plus', 'hangouts', 'linkedin-box', 'linkedin', 'login', 'logout', 'office', 'twitter', 'whatsapp', 'windows', 'pin', 'pin_off',
 
             //
             //Custom Icons
@@ -59,7 +59,7 @@ angular.module('demoapp', ['ngMdIcons'])
             'add_location', 'beenhere', 'directions', 'directions_bike', 'directions_bus', 'directions_car', 'directions_ferry', 'directions_subway', 'directions_train', 'directions_transit', 'directions_walk', 'edit_location', 'ev_station', 'flight', 'hotel', 'layers', 'layers_clear', 'local_activity', 'local_airport', 'local_atm', 'local_bar', 'local_cafe', 'local_car_wash', 'local_convenience_store', 'local_dining', 'local_drink', 'local_florist', 'local_gas_station', 'local_grocery_store', 'local_hospital', 'local_hotel', 'local_laundry_service', 'local_library', 'local_mall', 'local_movies', 'local_offer', 'local_parking', 'local_pharmacy', 'local_phone', 'local_pizza', 'local_play', 'local_post_office', 'local_print_shop', 'local_restaurant', 'local_see', 'local_shipping', 'local_taxi', 'map', 'my_location', 'navigation', 'near_me', 'person_pin_circle', 'person_pin', 'pin_drop', 'place', 'rate_review', 'restaurant', 'restaurant_menu', 'satellite', 'store_mall_directory', 'streetview', 'subway', 'terrain', 'traffic', 'train', 'tram', 'transfer_within_a_station', 'zoom_out_map',
 
             //navigation
-            'apps', 'arrow_back', 'arrow_downward', 'arrow_drop_down', 'arrow_drop_down_circle', 'arrow_drop_up', 'arrow_forward', 'arrow_upwards', 'cancel', 'check', 'chevron_left', 'chevron_right', 'close', 'expand_less', 'expand_more', 'first_page', 'fullscreen', 'fullscreen_exit', 'last_page', 'menu', 'more_horiz', 'more_vert', 'refresh', 'subdirectory_arrow_left', 'subdirectory_arrow_right',
+            'apps', 'arrow_back', 'arrow_downward', 'arrow_drop_down', 'arrow_drop_down_circle', 'arrow_drop_up', 'arrow_forward', 'arrow_upward', 'cancel', 'check', 'chevron_left', 'chevron_right', 'close', 'expand_less', 'expand_more', 'first_page', 'fullscreen', 'fullscreen_exit', 'last_page', 'menu', 'more_horiz', 'more_vert', 'refresh', 'subdirectory_arrow_left', 'subdirectory_arrow_right',
 
             //notification
             'adb', 'airline_seat_flat', 'airline_seat_angled', 'airline_seat_individual_suite', 'airline_seat_legroom_extra', 'airline_seat_legroom_normal', 'airline_seat_legroom_reduced', 'airline_seat_recline_extra', 'airline_seat_recline_normal', 'bluetooth_audio', 'confirmation_number', 'disc_full', 'do_not_disturb', 'do_not_disturb_alt', 'do_not_disturb_off', 'do_not_disturb_on', 'drive_eta', 'enhanced_encryption', 'event_available', 'event_busy', 'event_note', 'folder_special', 'live_tv', 'mms', 'more', 'network_check', 'network_locked', 'no_encryption', 'ondemand_video', 'personal_video', 'phone_bluetooth_speaker', 'phone_forwarded', 'phone_in_talk', 'phone_locked', 'phone_missed', 'phone_paused', 'power', 'priority_high', 'sd_card', 'sim_card_alert', 'sms', 'sms_failed', 'sync', 'sync_disabled', 'sync_problem', 'system_update', 'tap_and_play', 'time_to_leave', 'vibration', 'voice_chat', 'vpn_lock', 'wc', 'wifi',
