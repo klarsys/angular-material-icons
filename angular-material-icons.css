@@ -130,9 +130,17 @@ md-list-item .md-list-item-inner > ng-md-icon.md-secondary {
     box-sizing: content-box;
 }
 
-md-list-item > ng-md-icon:first-child,
-md-list-item .md-list-item-inner > ng-md-icon:first-child {
+[dir=ltr] md-list-item > ng-md-icon:first-child,
+[dir=ltr] md-list-item .md-list-item-inner > ng-md-icon:first-child{
+    -webkit-margin-end: 32px;
     margin-right: 32px;
+}
+
+
+[dir=rtl] md-list-item > ng-md-icon:first-child,
+[dir=rtl] md-list-item .md-list-item-inner > ng-md-icon:first-child{
+    -webkit-margin-end: 32px;
+    margin-left: 32px;
 }
 
 md-list-item.md-2-line > ng-md-icon:first-child,
